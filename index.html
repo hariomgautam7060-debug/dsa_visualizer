@@ -1,0 +1,101 @@
+Share
+
+Upgrade
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visual DSA 🚀</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<nav class="navbar">
+  <h1>🚀 Visual DSA</h1>
+  <div class="nav-links">
+    <button onclick="showPage('sorting')">Sorting</button>
+    <button onclick="showPage('searching')">Searching</button>
+    <button onclick="showPage('graph')">Graph</button>
+    <button onclick="showPage('array')">Array</button>
+    <button onclick="showPage('ds')">DS</button>
+    <button onclick="showPage('treePage')">Tree</button>
+    <button onclick="toggleTheme()">🌙</button>
+  </div>
+</nav>
+<!-- SORTING -->
+<section id="sorting" class="page active">
+  <h2>🔄 Sorting Algorithms</h2>
+  <input id="arrayInput" placeholder="5,3,8,1,4,2">
+  <select id="sortType">
+    <option value="bubble">Bubble Sort</option>
+    <option value="selection">Selection Sort</option>
+    <option value="insertion">Insertion Sort</option>
+    <option value="merge">Merge Sort</option>
+  </select>
+  <button onclick="setArray()">Set Array</button>
+  <button onclick="startSort()">Start Sort</button>
+  <div id="array"></div>
+</section>
+<!-- SEARCHING -->
+<section id="searching" class="page">
+  <h2>🔍 Searching Algorithms</h2>
+  <input id="searchInput" placeholder="5,10,15,20,25">
+  <input id="searchValue" placeholder="15">
+  <select id="searchType">
+    <option value="linear">Linear Search</option>
+    <option value="binary">Binary Search</option>
+  </select>
+  <button onclick="setSearch()">Set Array</button>
+  <button onclick="startSearch()">Start Search</button>
+  <div id="searchArray"></div>
+</section>
+<!-- ARRAY OPERATIONS -->
+<section id="array" class="page">
+  <h2>📊 Array Operations</h2>
+  <input id="arrayOpInput" placeholder="5,3,8,1">
+  <br><br>
+  <button onclick="arrayInsert()">Insert</button>
+  <button onclick="arrayDelete()">Delete</button>
+  <button onclick="arraySearch()">Search</button>
+  <button onclick="reverseArray()">Reverse</button>
+  <div id="arrayDisplay"></div>
+</section>
+<!-- GRAPH -->
+<section id="graph" class="page">
+  <h2>🌐 Graph Algorithms</h2>
+  <button onclick="resetGraph()">Reset</button>
+  <button onclick="bfs()">BFS</button>
+  <button onclick="dfs('A')">DFS</button>
+<svg id="graphSVG" width="800" height="400" class="graph-svg"></svg>
+
+
+</section>
+<!-- DATA STRUCTURES -->
+<section id="ds" class="page">
+  <h2>📚 Stack & Queue</h2>
+  <input id="stackVal" placeholder="10">
+  <button onclick="push()">Push</button>
+  <button onclick="pop()">Pop</button>
+  <div id="stack" class="stackContainer"></div>
+  <h2 style="margin-top:30px">🔄 Queue</h2>
+  <input id="queueVal" placeholder="20">
+  <button onclick="enqueue()">Enqueue</button>
+  <button onclick="dequeue()">Dequeue</button>
+  <div id="queue" class="queueContainer"></div>
+</section>
+<!-- TREE -->
+<section id="treePage" class="page">
+  <h2>🌳 Binary Search Tree</h2>
+  <input id="treeVal" placeholder="15">
+  <button onclick="insertBST()">Insert</button>
+  <button onclick="inorder()">Inorder</button>
+  <button onclick="preorder()">Preorder</button>
+  <button onclick="postorder()">Postorder</button>
+<svg id="treeSVG" width="900" height="500" class="tree-svg"></svg>
+
+
+  <div id="output" class="output"></div>
+</section>
+<script src="index.js"></script>
+</body>
+</html>
