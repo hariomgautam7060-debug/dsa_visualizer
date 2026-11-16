@@ -288,3 +288,162 @@ height: 250px;
 width: 20px;
 }
 }
+
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page {
+    padding: 20px 15px;
+  }
+
+  input, select {
+    max-width: 100%;
+  }
+
+  .graph-svg, .tree-svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 7px;
+  }
+
+  .nav-links button {
+    margin: 0;
+    padding: 10px 4px;
+    font-size: 12px;
+  }
+
+  .page {
+    padding: 18px 12px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input, select {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .page button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  #array, #searchArray, #arrayDisplay {
+    height: 230px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .bar {
+    flex: 0 0 18px;
+  }
+
+  .stackContainer, .queueContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .graph-svg, .tree-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .output {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* GRAPH AND TREE RESPONSIVE FIX */
+
+/* SVG container */
+.graph-svg,
+.tree-svg {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .graph-svg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+  }
+
+  .tree-svg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 5;
+  }
+
+  .node-text {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .graph-svg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    padding: 5px;
+  }
+
+  .tree-svg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 5;
+    padding: 5px;
+  }
+
+  .node-circle {
+    stroke-width: 2;
+  }
+
+  .node-text {
+    font-size: 15px;
+  }
+
+  .line {
+    stroke-width: 2;
+  }
+}
